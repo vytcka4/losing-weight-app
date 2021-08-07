@@ -10,3 +10,7 @@ main {
   width: 60%;
   border: 1px solid black;
 }
+
+.hidden {
+  display: none;
+}
