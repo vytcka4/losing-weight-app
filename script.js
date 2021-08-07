@@ -3,8 +3,7 @@ const currentWeight = document.querySelector(".current");
 const goalWeight = document.querySelector(".goal");
 const losingSpeed = document.querySelector(".speed");
 
-form.addEventListener("submit", function (x) {
-  x.preventDefault();
+const calcTime = function () {
   current = currentWeight.value;
   goal = goalWeight.value;
   speed = losingSpeed.value;
@@ -19,4 +18,9 @@ form.addEventListener("submit", function (x) {
     }
   } while (current >= goal);
   console.log(`${weeks} ${days}`);
+};
+
+form.addEventListener("submit", function (x) {
+  x.preventDefault();
+  calcTime();
 });
