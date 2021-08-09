@@ -2,13 +2,20 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  background-image: linear-gradient(0.3turn, #93bbe0, #6fd6ff);
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  /* opacity: 0.8; */
 }
 main {
+  margin-top: 2rem;
+  border-radius: 10%;
   display: block;
   justify-content: center;
+  text-align: center;
   height: 40rem;
   width: 60%;
-  border: 1px solid black;
+  /* border: 1px solid white; */
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(214, 213, 213));
 }
 
 .hidden {
