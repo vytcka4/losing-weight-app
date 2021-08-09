@@ -24,7 +24,7 @@ const calcTime = function () {
   do {
     weeks++;
     current = current - (current / 100) * speed;
-    progress.set(weeks, current);
+    progress.set(weeks, Math.round(current));
   } while (current >= goal);
   return weeks, progress;
 };
@@ -46,20 +46,20 @@ form.addEventListener("submit", function (x) {
     </tbody>
   `;
     progressTable.insertAdjacentHTML("beforeend", html);
-    if (progress.has(25)) {
-      const html2 = ` <div>
-      <table>
-        <thead class="progress-table">
-          <tr>
-            <th>${key}</th>
-            <th>${value}</th>
-            <th>${currentWeight.value - value}</th>
-          </tr>
-        </thead>
-      </table>
-    </div>`;
-      table.insertAdjacentHTML("beforeend", html2);
-    }
+    // if (progress.has(25)) {
+    //   const html2 = ` <div>
+    //   <table>
+    //     <thead class="progress-table">
+    //       <tr>
+    //         <th>${key}</th>
+    //         <th>${value}</th>
+    //         <th>${currentWeight.value - value}</th>
+    //       </tr>
+    //     </thead>
+    //   </table>
+    // </div>`;
+    //   table.insertAdjacentHTML("beforeend", html2);
+    // }
   });
   table.classList.toggle("hidden");
 });

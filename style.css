@@ -18,12 +18,12 @@ main {
   background-image: linear-gradient(rgb(255, 255, 255), rgb(214, 213, 213));
 }
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 .table {
-  font-size: 12px;
+  font-size: 10px;
   width: 80%;
   height: 30rem;
   border: 1px solid black;
