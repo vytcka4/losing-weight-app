@@ -12,7 +12,7 @@ main {
   display: block;
   justify-content: center;
   text-align: center;
-  height: 40rem;
+  height: 50rem;
   width: 60%;
   /* border: 1px solid white; */
   background-image: linear-gradient(rgb(255, 255, 255), rgb(214, 213, 213));
@@ -20,4 +20,11 @@ main {
 
 .hidden {
   display: none;
+}
+
+.table {
+  font-size: 12px;
+  width: 80%;
+  height: 30rem;
+  border: 1px solid black;
 }
