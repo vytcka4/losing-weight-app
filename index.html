@@ -15,69 +15,73 @@
   </head>
   <body>
     <main>
-      <div class="title">
-        <h1>LosingWeightTimeCalc</h1>
+      <div class="form-container">
+        <div class="title">
+          <h1>LosingWeightTimeCalc</h1>
+        </div>
+        <div class="main-form">
+          <form action="">
+            <div class="form-number-container">
+              <label for="number">Enter your current weight in kg: </label>
+              <input
+                type="number"
+                name="current-weight"
+                class="form-number current"
+                placeholder="0"
+                required
+                size="4"
+                maxlength="4"
+              />
+            </div>
+            <div class="form-number-container">
+              <label for="number">Enter your perfect weight in kg:</label>
+              <input
+                type="number"
+                name="goal-weight"
+                class="form-number goal"
+                placeholder="0"
+                required
+                size="4"
+                maxlength="4"
+              />
+            </div>
+            <div class="select-section">
+              <label for="select-value">
+                choose what percenteage (%) of your current weight you want lose
+                per week :
+              </label>
+              <select name="select-value" class="speed">
+                <option class="percent-option" value="0.5">0.5</option>
+                <option class="percent-option" value="0.75">0.75</option>
+                <option class="percent-option" value="1">1</option>
+                <option class="percent-option" value="1.25">1.25</option>
+                <option class="percent-option" value="1.5">1.5</option>
+              </select>
+            </div>
+            <div class="form-number">
+              <label for="submit"></label>
+              <input type="submit" value="calcualte" class="submit" />
+            </div>
+          </form>
+          <button class="reset">reset</button>
+        </div>
       </div>
-      <div class="main-form">
-        <form action="">
-          <div class="form-number-container">
-            <label for="number">Enter your current weight in kg: </label>
-            <input
-              type="number"
-              name="current-weight"
-              class="form-number current"
-              placeholder="0"
-              required
-              size="4"
-              maxlength="4"
-            />
+      <div class="result-container">
+        <div class="result hidden">
+          <h2 class="result-text">welcome</h2>
+        </div>
+        <div class="table hidden">
+          <div>
+            <table>
+              <thead class="progress-table">
+                <tr>
+                  <th>week</th>
+                  <th>current weight</th>
+                  <th>lost weight</th>
+                </tr>
+              </thead>
+            </table>
           </div>
-          <div class="form-number-container">
-            <label for="number">Enter your perfect weight in kg:</label>
-            <input
-              type="number"
-              name="goal-weight"
-              class="form-number goal"
-              placeholder="0"
-              required
-              size="4"
-              maxlength="4"
-            />
-          </div>
-          <div class="select-section">
-            <label for="select-value">
-              choose what percenteage (%) of your current weight you want lose
-              per week :
-            </label>
-            <select name="select-value" class="speed">
-              <option class="percent-option" value="0.5">0.5</option>
-              <option class="percent-option" value="0.75">0.75</option>
-              <option class="percent-option" value="1">1</option>
-              <option class="percent-option" value="1.25">1.25</option>
-              <option class="percent-option" value="1.5">1.5</option>
-            </select>
-          </div>
-          <div class="form-number">
-            <label for="submit"></label>
-            <input type="submit" value="calcualte" class="submit" />
-          </div>
-        </form>
-        <button class="reset">reset</button>
-      </div>
-      <div class="result hidden">
-        <h2 class="result-text">welcome</h2>
-      </div>
-      <div class="table hidden">
-        <div>
-          <table>
-            <thead class="progress-table">
-              <tr>
-                <th>week</th>
-                <th>current weight</th>
-                <th>lost weight</th>
-              </tr>
-            </thead>
-          </table>
         </div>
       </div>
     </main>
