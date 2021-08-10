@@ -12,6 +12,10 @@ const progressTable = document.querySelector(".progress-table");
 let weeks = 0;
 const progress = new Map();
 
+Number.prototype.round = function (places) {
+  return +(Math.round(this + "e+" + places) + "e-" + places);
+};
+
 // this function calculates how much it takes to lose weight and returns progress data
 
 const calcTime = function () {
@@ -24,7 +28,7 @@ const calcTime = function () {
   do {
     weeks++;
     current = current - (current / 100) * speed;
-    progress.set(weeks, Math.round(current));
+    progress.set(weeks, current.round(2));
   } while (current >= goal);
   return weeks, progress;
 };
@@ -40,8 +44,8 @@ form.addEventListener("submit", function (x) {
     <tbody>
       <tr>
         <th>${key}</th>
-        <th>${value}</th>
-        <th>-${currentWeight.value - value}</th>
+        <th>${value.round(2)}</th>
+        <th>-${(currentWeight.value - value).round(2)}</th>
       </tr>
     </tbody>
   `;

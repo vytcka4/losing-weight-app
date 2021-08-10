@@ -24,7 +24,11 @@ main {
 
 .table {
   font-size: 10px;
-  width: 80%;
+  width: 25%;
   height: 30rem;
   border: 1px solid black;
+}
+table {
+  border: 1px solid black;
+  width: 100%;
 }
