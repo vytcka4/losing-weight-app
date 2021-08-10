@@ -12,6 +12,8 @@ const progressTable = document.querySelector(".progress-table");
 let weeks = 0;
 const progress = new Map();
 
+// rounding number 0.01
+
 Number.prototype.round = function (places) {
   return +(Math.round(this + "e+" + places) + "e-" + places);
 };

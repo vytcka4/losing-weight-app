@@ -18,17 +18,45 @@ main {
   background-image: linear-gradient(rgb(255, 255, 255), rgb(214, 213, 213));
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
+
+/* !!!!!!!!! TABLE!!!!!!!!!! */
 
 .table {
   font-size: 10px;
   width: 25%;
-  height: 30rem;
+  height: 25rem;
   border: 1px solid black;
 }
 table {
-  border: 1px solid black;
+  border: 1px solid White;
   width: 100%;
+  background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
+}
+th {
+  border: 1px solid white;
+}
+tr {
+  border: 1px solid white;
+}
+
+/* !!!!!!!!! TABLE!!!!!!!!!! */
+
+.speed:hover {
+  background-image: linear-gradient(0.3turn, #93bbe0, #6fd6ff);
+}
+.speed {
+  padding: 7px 4px;
+  background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
+}
+.percent-option:hover {
+  background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
+}
+.form-number {
+  padding: 7px 4px;
+}
+input[type="number"] {
+  width: 50px;
 }
