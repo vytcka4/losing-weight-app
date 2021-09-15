@@ -10,6 +10,7 @@ const table = document.querySelector(".table");
 const progressTable = document.querySelector(".progress-table");
 
 const resetBtn = document.querySelector(".reset");
+const submitBtn = document.querySelector(".submit");
 let weeks = 0;
 const progress = new Map();
 
@@ -39,9 +40,8 @@ const calcTime = function () {
 form.addEventListener("submit", function (x) {
   x.preventDefault();
   calcTime();
-  result.classList.toggle("hidden");
+  result.classList.remove("hidden");
   resultText.innerText = `you will need ${weeks} weeks to rech your goal weight of ${goalWeight.value} kg`;
-  console.log(progress);
   progress.forEach(function (value, key, map) {
     let html = `
     <tbody>
@@ -53,37 +53,31 @@ form.addEventListener("submit", function (x) {
     </tbody>
   `;
     progressTable.insertAdjacentHTML("beforeend", html);
-    // if (progress.has(25)) {
-    //   const html2 = ` <div>
-    //   <table>
-    //     <thead class="progress-table">
-    //       <tr>
-    //         <th>${key}</th>
-    //         <th>${value}</th>
-    //         <th>${currentWeight.value - value}</th>
-    //       </tr>
-    //     </thead>
-    //   </table>
-    // </div>`;
-    //   table.insertAdjacentHTML("beforeend", html2);
-    // }
   });
-  if (table.classList.contains("hidden")) {
-    table.classList.toggle("hidden");
-  }
+  // if (table.classList.contains("hidden")) {
+  //   progressTable.removeAdjacentHTML("beforeend", html);
+  // }
+  table.classList.remove("hidden");
 
   currentWeight.value = "";
   goalWeight.value = "";
   losingSpeed.value = "0.5";
+  weeks = "";
+  progress = "";
+  disabled();
 });
+
+const disabled = form.addEventListener("click", () => (this.disabled = true));
 
 const reset = () => {
   if (!table.classList.contains("hidden")) {
     table.classList.add("hidden");
+    result.classList.add("hidden");
     resultText.innerText = "";
     currentWeight.value = "";
     goalWeight.value = "";
     losingSpeed.value = "0.5";
+    progressTable.innerHTML = "";
   }
 };
 
