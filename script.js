@@ -9,6 +9,7 @@ const resultText = document.querySelector(".result-text");
 const table = document.querySelector(".table");
 const progressTable = document.querySelector(".progress-table");
 
+const resetBtn = document.querySelector(".reset");
 let weeks = 0;
 const progress = new Map();
 
@@ -68,4 +69,19 @@ form.addEventListener("submit", function (x) {
     // }
   });
   table.classList.toggle("hidden");
+  currentWeight.value = "";
+  goalWeight.value = "";
+  losingSpeed.value = "0.5";
 });
+
+const reset = () => {
+  if (!table.classList.contains("hidden")) {
+    table.classList.add("hidden");
+    resultText.innerText = "";
+    currentWeight.value = "";
+    goalWeight.value = "";
+    losingSpeed.value = "0.5";
+  }
+};
+
+resetBtn.addEventListener("click", reset);
