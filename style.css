@@ -44,6 +44,10 @@ main {
   height: 5rem;
   /* border: 1px solid black; */
 }
+.title {
+  text-align: center;
+  justify-content: center;
+}
 
 .table {
   font-size: 10px;
@@ -86,4 +90,22 @@ tr {
 }
 input[type="number"] {
   width: 50px;
+}
+
+.buttons {
+  padding: 2rem 4rem 2rem 4rem;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+.buttons:last-of-type {
+  padding: 0.5rem 6rem 0.5rem 6rem;
+}
+
+.buttons:hover {
+  background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
+}
+
+.form-number-container {
+  margin-bottom: 1rem;
 }

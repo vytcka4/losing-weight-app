@@ -65,6 +65,7 @@ form.addEventListener("submit", function (x) {
   weeks = "";
   // progress = "";
   submitBtn.classList.add("hidden");
+  resetBtn.classList.remove("hidden");
 });
 
 const reset = () => {
@@ -77,6 +78,7 @@ const reset = () => {
     goalWeight.value = "";
     losingSpeed.value = "0.5";
     progressTable.innerHTML = "";
+    resetBtn.classList.add("hidden");
   }
 };
 
