@@ -63,16 +63,15 @@ form.addEventListener("submit", function (x) {
   goalWeight.value = "";
   losingSpeed.value = "0.5";
   weeks = "";
-  progress = "";
-  disabled();
+  // progress = "";
+  submitBtn.classList.add("hidden");
 });
-
-const disabled = form.addEventListener("click", () => (this.disabled = true));
 
 const reset = () => {
   if (!table.classList.contains("hidden")) {
     table.classList.add("hidden");
     result.classList.add("hidden");
+    submitBtn.classList.remove("hidden");
     resultText.innerText = "";
     currentWeight.value = "";
     goalWeight.value = "";
