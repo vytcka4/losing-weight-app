@@ -13,11 +13,13 @@ main {
   justify-content: center;
   text-align: center;
   height: 50rem;
-  width: 60%;
+  width: 70%;
   /* border: 1px solid white; */
   background-image: linear-gradient(rgb(255, 255, 255), rgb(214, 213, 213));
 }
-
+.main-form {
+  font-size: 25px;
+}
 .form-container {
   width: 50%;
   /* border: 1px solid black; */
@@ -68,14 +70,19 @@ tr {
   background-image: linear-gradient(0.3turn, #93bbe0, #6fd6ff);
 }
 .speed {
-  padding: 7px 4px;
+  padding: 10px 6px;
   background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
+  font-size: 25px;
 }
 .percent-option:hover {
   background: linear-gradient(to right top, rgb(195, 247, 247), #93bbe0);
 }
+.form-number:first-child {
+  margin-bottom: 2px;
+}
 .form-number {
-  padding: 7px 4px;
+  padding: 8px 6px;
+  font-size: 25px;
 }
 input[type="number"] {
   width: 50px;

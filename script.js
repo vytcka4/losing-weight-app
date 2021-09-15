@@ -43,7 +43,7 @@ form.addEventListener("submit", function (x) {
   resultText.innerText = `you will need ${weeks} weeks to rech your goal weight of ${goalWeight.value} kg`;
   console.log(progress);
   progress.forEach(function (value, key, map) {
-    const html = `
+    let html = `
     <tbody>
       <tr>
         <th>${key}</th>
@@ -68,7 +68,10 @@ form.addEventListener("submit", function (x) {
     //   table.insertAdjacentHTML("beforeend", html2);
     // }
   });
-  table.classList.toggle("hidden");
+  if (table.classList.contains("hidden")) {
+    table.classList.toggle("hidden");
+  }
+
   currentWeight.value = "";
   goalWeight.value = "";
   losingSpeed.value = "0.5";
